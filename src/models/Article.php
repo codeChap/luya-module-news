@@ -136,7 +136,7 @@ class Article extends NgRestModel
         return [
             'title' => 'text',
             'teaser_text' => ['textarea', 'markdown' => true],
-            'text' => ['textarea', 'markdown' => true],
+            'text' => ['wysiwyg'],
             'image_id' => 'image',
             'is_online'  => ['toggleStatus', 'scheduling' => true],
             'is_archived' => ['toggleStatus', 'scheduling' => true],
