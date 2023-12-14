@@ -98,7 +98,7 @@ class Article extends NgRestModel
     public function rules()
     {
         return [
-            [['title', 'text'], 'required'],
+            [['title', 'text', 'cat_id'], 'required'],
             [['title', 'text', 'image_list', 'file_list', 'teaser_text', 'author'], 'string'],
             [['cat_id', 'create_user_id', 'update_user_id', 'timestamp_create', 'timestamp_update'], 'integer'],
             [['cat_id'], 'exist', 'targetClass' => Cat::class, 'targetAttribute' => 'id'],
